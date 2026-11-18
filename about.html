@@ -9,10 +9,7 @@
     <link rel="icon" href="assets/images/favicon.svg" type="image/svg+xml">
     <link rel="stylesheet" href="assets/vendor/bootstrap.min.css">
     <link rel="stylesheet" href="assets/css/style.css">
-    <script defer src="assets/vendor/jquery.min.js"></script>
     <script defer src="assets/vendor/bootstrap.bundle.min.js"></script>
-    <script defer src="assets/js/scoring.js"></script>
-    <script defer src="assets/js/app.js"></script>
   </head>
   <body data-page="about">
     <a href="#main" class="skip-link">Skip to content</a>
@@ -115,10 +112,10 @@
               </div>
               <div class="accordion-item">
                 <h3 class="accordion-header">
-                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-two" aria-expanded="false" aria-controls="faq-two">Where are my answers stored?</button>
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-two" aria-expanded="false" aria-controls="faq-two">Can I pause the quiz?</button>
                 </h3>
                 <div id="faq-two" class="accordion-collapse collapse" data-bs-parent="#faq">
-                  <div class="accordion-body">Your nickname, current quiz, and most recent result are stored in this browser using localStorage. They are not sent to a server. Clearing site data removes them. If browser storage is unavailable, you can still finish the quiz in the current tab.</div>
+                  <div class="accordion-body">Your answers stay in the current tab. You can go back while taking the quiz. Reloading the page starts a new round.</div>
                 </div>
               </div>
               <div class="accordion-item">
@@ -134,7 +131,7 @@
         </div>
         <div class="project-note">
           <h2>Project credits</h2>
-          <p>Built with HTML5, CSS3, Bootstrap 5, JavaScript, and jQuery. Character and question data load from local JSON files.</p>
+          <p>Built with HTML5, CSS3, Bootstrap 5, JavaScript, and jQuery. The quiz runs in your browser using local JavaScript files.</p>
           <p class="mb-0">
             Artwork: Supercell, via the
             <a href="https://github.com/RoyaleAPI/cr-api-assets" target="_blank" rel="noopener noreferrer">RoyaleAPI asset repository</a>
@@ -158,8 +155,6 @@
         </div>
       </div>
     </footer>
-    <div id="notification" class="notification" role="status" aria-live="polite" hidden>
-    </div>
     <noscript>
       <div class="noscript">Enable JavaScript to take the quiz and browse character profiles.</div>
     </noscript>

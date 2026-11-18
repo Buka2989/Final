@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="assets/css/style.css">
     <script defer src="assets/vendor/jquery.min.js"></script>
     <script defer src="assets/vendor/bootstrap.bundle.min.js"></script>
-    <script defer src="assets/js/scoring.js"></script>
+    <script defer src="assets/js/data.js"></script>
     <script defer src="assets/js/app.js"></script>
   </head>
   <body data-page="characters">
@@ -56,25 +56,12 @@
       <section class="container section-space">
         <div class="page-intro">
           <h1>Characters</h1>
-          <p>Look up any of the eight possible results by name or personality style.</p>
+          <p>Look up any of the eight possible results by name or description.</p>
         </div>
         <div class="filter-panel row g-3 align-items-end">
           <div class="col-md-7">
             <label for="character-search" class="form-label">Find a character</label>
             <input class="form-control" id="character-search" type="search" placeholder="Search a name or personality…">
-          </div>
-          <div class="col-md-3">
-            <label for="character-type" class="form-label">Personality style</label>
-            <select id="character-type" class="form-select">
-              <option value="all">All styles</option>
-              <option>Team player</option>
-              <option>Thinker</option>
-              <option>Leader</option>
-              <option>Explorer</option>
-            </select>
-          </div>
-          <div class="col-md-2">
-            <button id="clear-filters" class="btn btn-outline-dark w-100" type="button">Reset filters</button>
           </div>
         </div>
         <p id="character-count" class="result-count" role="status">Loading characters…</p>
@@ -82,7 +69,7 @@
         </div>
         <div id="no-characters" class="empty-state" hidden>
           <h2>No matching characters</h2>
-          <p>Try another name or reset your filters.</p>
+          <p>Try another search or clear the search field.</p>
         </div>
         <div class="bottom-banner mt-5">
           <div>
@@ -124,8 +111,6 @@
         </div>
       </div>
     </footer>
-    <div id="notification" class="notification" role="status" aria-live="polite" hidden>
-    </div>
     <noscript>
       <div class="noscript">Enable JavaScript to take the quiz and browse character profiles.</div>
     </noscript>

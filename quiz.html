@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="assets/css/style.css">
     <script defer src="assets/vendor/jquery.min.js"></script>
     <script defer src="assets/vendor/bootstrap.bundle.min.js"></script>
-    <script defer src="assets/js/scoring.js"></script>
+    <script defer src="assets/js/data.js"></script>
     <script defer src="assets/js/app.js"></script>
   </head>
   <body data-page="quiz">
@@ -58,29 +58,6 @@
           <h1>Personality quiz</h1>
           <p>Pick the answer closest to what you would do.</p>
         </div>
-        <div id="quiz-loading" class="panel text-center" role="status">Loading questions…</div>
-        <section id="quiz-intro" class="panel intro-panel" hidden aria-labelledby="intro-title">
-          <span class="mini-crown" aria-hidden="true">♛</span>
-          <h2 id="intro-title">Choose a nickname</h2>
-          <p>Your nickname stays in this browser. No account needed.</p>
-          <form id="nickname-form" novalidate>
-            <label for="nickname" class="form-label">Player nickname</label>
-            <input id="nickname" class="form-control form-control-lg" autocomplete="nickname" maxlength="20" required minlength="2" aria-describedby="nickname-help nickname-error" placeholder="e.g. RoyalRookie">
-            <div id="nickname-help" class="form-text">2–20 characters. Letters, numbers, spaces, _ or -.</div>
-            <p id="nickname-error" class="field-error" role="alert">
-            </p>
-            <button class="btn btn-primary w-100" type="submit">
-              Enter the arena
-              <span aria-hidden="true">→</span>
-            </button>
-          </form>
-          <div id="resume-box" class="resume-box" hidden>
-            <p id="resume-description">
-            </p>
-            <button id="resume-quiz" class="btn btn-outline-dark" type="button">Continue saved quiz</button>
-          </div>
-          <p class="small-note">12 questions · About 3 minutes · Progress saved automatically</p>
-        </section>
         <section id="quiz-question" class="panel" hidden aria-labelledby="question-title">
           <div class="quiz-meta">
             <span id="question-count">
@@ -107,13 +84,13 @@
             </div>
           </form>
           <div class="quiz-bottom">
-            <button class="link-button" id="restart-quiz" type="button" data-bs-toggle="modal" data-bs-target="#restart-modal">Start over</button>
+            <button class="link-button" id="restart-quiz" type="button">Start over</button>
           </div>
         </section>
         <section id="quiz-result" class="panel result-panel" hidden aria-labelledby="result-title">
           <div class="result-header">
             <img id="result-image" alt="">
-            <p id="result-player" class="eyebrow"></p>
+            <p class="eyebrow">YOUR CLOSEST MATCH</p>
             <h2 id="result-title" tabindex="-1"></h2>
             <p id="result-role"></p>
           </div>
@@ -133,36 +110,14 @@
               <h3>Your scores</h3>
               <div id="result-scores"></div>
             </div>
-            <p class="result-alternatives">Also close: <strong id="result-alternatives"></strong>.</p>
             <div class="result-actions">
-              <button type="button" id="copy-result" class="btn btn-primary">Copy result</button>
-              <button type="button" id="retake-quiz" class="btn btn-outline-dark">Play again</button>
+              <button type="button" id="retake-quiz" class="btn btn-primary">Play again</button>
               <a href="characters.html" class="btn btn-outline-dark">All characters</a>
-            </div>
-            <div id="share-fallback" class="share-fallback" hidden>
-              <label for="share-text">Select and copy your result:</label>
-              <textarea id="share-text" class="form-control" rows="3" readonly></textarea>
             </div>
           </div>
         </section>
         <p class="quiz-disclaimer">This quiz is just for fun.</p>
       </section>
-      <div class="modal fade" id="restart-modal" tabindex="-1" aria-labelledby="restart-title" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h2 class="modal-title fs-4" id="restart-title">Start a new round?</h2>
-              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
-              </button>
-            </div>
-            <div class="modal-body">Your current answers will be cleared. Your last completed result will stay saved until you finish a new quiz.</div>
-            <div class="modal-footer">
-              <button type="button" class="btn btn-outline-dark" data-bs-dismiss="modal">Keep playing</button>
-              <button id="confirm-restart" type="button" class="btn btn-primary" data-bs-dismiss="modal">Start over</button>
-            </div>
-          </div>
-        </div>
-      </div>
     </main>
     <footer class="site-footer">
       <div class="container">
@@ -179,8 +134,6 @@
         </div>
       </div>
     </footer>
-    <div id="notification" class="notification" role="status" aria-live="polite" hidden>
-    </div>
     <noscript>
       <div class="noscript">Enable JavaScript to take the quiz and browse character profiles.</div>
     </noscript>
