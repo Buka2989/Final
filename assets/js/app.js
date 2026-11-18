@@ -1,6 +1,37 @@
 $(function () {
   const page = document.body.dataset.page;
 
+    // Toast Notification System
+  let toastTimer;
+
+  function showToast(message, type = 'info') {
+    clearTimeout(toastTimer);
+
+    // Create notification container if it doesn't exist
+    if ($('#toast-notification').length === 0) {
+      $('body').append(`
+        <div id="toast-notification"
+             class="notification"
+             role="status"
+             aria-live="polite">
+        </div>
+      `);
+    }
+
+    const toast = $('#toast-notification');
+
+    toast
+      .removeClass('toast-success toast-error toast-info')
+      .addClass(`toast-${type}`)
+      .text(message)
+      .addClass('toast-visible');
+
+    // Hide notification after 3 seconds
+    toastTimer = setTimeout(function () {
+      toast.removeClass('toast-visible');
+    }, 3000);
+  }
+
   function escapeHtml(value) {
     return $('<span>').text(value).html().replace(/"/g, '&quot;');
   }
@@ -141,6 +172,7 @@ $(function () {
       $('#quiz-result').prop('hidden', false);
       document.getElementById('result-title').focus({ preventScroll: true });
       document.getElementById('quiz-result').scrollIntoView();
+      showToast('Congratulations! Your result is ready!', 'success');
     }
 
     $('#answer-options').on('change', 'input', function () {
@@ -154,6 +186,7 @@ $(function () {
       if (answers[current] === null) {
         $('#answer-error').text('Choose one answer before moving on.');
         $('#answer-options input').first().trigger('focus');
+        showToast('Please select an answer first!', 'error');
       } else if (current === questions.length - 1) {
         showResult();
       } else {
@@ -173,6 +206,7 @@ $(function () {
       $('#quiz-result').prop('hidden', true);
       $('#quiz-question').prop('hidden', false);
       showQuestion();
+      showToast('A new quiz has started!', 'info');
     });
 
     showQuestion(false);
