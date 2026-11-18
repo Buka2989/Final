@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Discover your Clash Royale personality in 12 questions. Explore 8 characters and find your arena alter ego.">
+    <meta name="theme-color" content="#172724">
+    <title>Characters | Arena ID</title>
+    <link rel="icon" href="assets/images/favicon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="assets/vendor/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <script defer src="assets/vendor/jquery.min.js"></script>
+    <script defer src="assets/vendor/bootstrap.bundle.min.js"></script>
+    <script defer src="assets/js/scoring.js"></script>
+    <script defer src="assets/js/app.js"></script>
+  </head>
+  <body data-page="characters">
+    <a href="#main" class="skip-link">Skip to content</a>
+    <header class="site-header">
+      <nav class="navbar navbar-expand-md container" aria-label="Main navigation">
+        <a class="navbar-brand" href="index.html">
+          <span class="brand-symbol" aria-hidden="true">♜</span>
+          ARENA
+          <span class="brand-id">ID</span>
+          <span class="brand-divider">
+          </span>
+          <span class="brand-caption">FIND YOUR CARD</span>
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navigation" aria-controls="navigation" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon">
+          </span>
+        </button>
+        <div class="collapse navbar-collapse" id="navigation">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link"  href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link"  href="quiz.html">The quiz</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="characters.html">Characters</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link"  href="about.html">About</a>
+            </li>
+          </ul>
+          <a href="quiz.html" class="btn btn-nav ms-md-4">
+            Enter the arena
+            <span aria-hidden="true">↗</span>
+          </a>
+        </div>
+      </nav>
+    </header>
+    <main id="main">
+      <section class="container section-space">
+        <div class="page-intro">
+          <h1>Characters</h1>
+          <p>Look up any of the eight possible results by name or personality style.</p>
+        </div>
+        <div class="filter-panel row g-3 align-items-end">
+          <div class="col-md-7">
+            <label for="character-search" class="form-label">Find a character</label>
+            <input class="form-control" id="character-search" type="search" placeholder="Search a name or personality…">
+          </div>
+          <div class="col-md-3">
+            <label for="character-type" class="form-label">Personality style</label>
+            <select id="character-type" class="form-select">
+              <option value="all">All styles</option>
+              <option>Team player</option>
+              <option>Thinker</option>
+              <option>Leader</option>
+              <option>Explorer</option>
+            </select>
+          </div>
+          <div class="col-md-2">
+            <button id="clear-filters" class="btn btn-outline-dark w-100" type="button">Reset filters</button>
+          </div>
+        </div>
+        <p id="character-count" class="result-count" role="status">Loading characters…</p>
+        <div id="character-grid" class="row g-4">
+        </div>
+        <div id="no-characters" class="empty-state" hidden>
+          <h2>No matching characters</h2>
+          <p>Try another name or reset your filters.</p>
+        </div>
+        <div class="bottom-banner mt-5">
+          <div>
+            <h2>Which character fits you?</h2>
+          </div>
+          <a href="quiz.html" class="btn btn-light">Find my character →</a>
+        </div>
+      </section>
+      <div class="modal fade" id="character-modal" tabindex="-1" aria-labelledby="character-modal-title" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h2 class="modal-title fs-4" id="character-modal-title">
+              </h2>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
+              </button>
+            </div>
+            <div id="character-modal-body" class="modal-body">
+            </div>
+            <div class="modal-footer">
+              <a href="quiz.html" class="btn btn-primary">Find my match →</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer class="site-footer">
+      <div class="container">
+        <div class="footer-top">
+          <a class="footer-brand" href="index.html">
+            ♜ ARENA
+            <span>ID</span>
+          </a>
+          <a href="about.html">About this project ↗</a>
+        </div>
+        <div class="footer-bottom">
+          <span>© 2026 Arena ID · Student fan project</span>
+          <span>Unofficial. Not affiliated with or endorsed by Supercell.</span>
+        </div>
+      </div>
+    </footer>
+    <div id="notification" class="notification" role="status" aria-live="polite" hidden>
+    </div>
+    <noscript>
+      <div class="noscript">Enable JavaScript to take the quiz and browse character profiles.</div>
+    </noscript>
+  </body>
+</html>

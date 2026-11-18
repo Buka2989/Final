@@ -1,0 +1,167 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Discover your Clash Royale personality in 12 questions. Explore 8 characters and find your arena alter ego.">
+    <meta name="theme-color" content="#172724">
+    <title>About | Arena ID</title>
+    <link rel="icon" href="assets/images/favicon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="assets/vendor/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <script defer src="assets/vendor/jquery.min.js"></script>
+    <script defer src="assets/vendor/bootstrap.bundle.min.js"></script>
+    <script defer src="assets/js/scoring.js"></script>
+    <script defer src="assets/js/app.js"></script>
+  </head>
+  <body data-page="about">
+    <a href="#main" class="skip-link">Skip to content</a>
+    <header class="site-header">
+      <nav class="navbar navbar-expand-md container" aria-label="Main navigation">
+        <a class="navbar-brand" href="index.html">
+          <span class="brand-symbol" aria-hidden="true">♜</span>
+          ARENA
+          <span class="brand-id">ID</span>
+          <span class="brand-divider">
+          </span>
+          <span class="brand-caption">FIND YOUR CARD</span>
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navigation" aria-controls="navigation" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon">
+          </span>
+        </button>
+        <div class="collapse navbar-collapse" id="navigation">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link"  href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link"  href="quiz.html">The quiz</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link"  href="characters.html">Characters</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="about.html">About</a>
+            </li>
+          </ul>
+          <a href="quiz.html" class="btn btn-nav ms-md-4">
+            Enter the arena
+            <span aria-hidden="true">↗</span>
+          </a>
+        </div>
+      </nav>
+    </header>
+    <main id="main">
+      <section class="container section-space">
+        <div class="page-intro">
+          <h1>About Arena ID</h1>
+          <p>A student-built personality quiz inspired by the characters of Clash Royale.</p>
+        </div>
+        <div class="row g-4">
+          <div class="col-lg-7">
+            <article class="panel about-story">
+              <h2>How the quiz works</h2>
+              <p>The questions are about everyday situations, so you can take the quiz without having played Clash Royale.</p>
+              <h3>How your match is calculated</h3>
+              <p>Each answer adds points to four traits: courage, strategy, teamwork, and creativity. We average those points into a profile from 0 to 100, then compare it with eight character profiles.</p>
+              <p>The character with the smallest total difference is your closest match. If two are equally close, their IDs in alphabetical order break the tie. The bars describe your answers within this quiz; they are not scientific measurements.</p>
+              <a class="text-link" href="quiz.html">Discover your profile →</a>
+            </article>
+          </div>
+          <div class="col-lg-5">
+            <aside class="trait-guide">
+              <span class="eyebrow">THE FOUR TRAITS</span>
+              <div>
+                <span class="trait-symbol">↗</span>
+                <h3>Courage</h3>
+                <p>Taking initiative and facing uncertainty.</p>
+              </div>
+              <div>
+                <span class="trait-symbol">◇</span>
+                <h3>Strategy</h3>
+                <p>Thinking ahead and looking for patterns.</p>
+              </div>
+              <div>
+                <span class="trait-symbol">♡</span>
+                <h3>Teamwork</h3>
+                <p>Supporting people and working together.</p>
+              </div>
+              <div>
+                <span class="trait-symbol">✦</span>
+                <h3>Creativity</h3>
+                <p>Exploring ideas and trying a different route.</p>
+              </div>
+            </aside>
+          </div>
+        </div>
+        <div class="row g-4 section-space">
+          <div class="col-lg-5">
+            <h2>Frequently asked questions</h2>
+          </div>
+          <div class="col-lg-7">
+            <div class="accordion" id="faq">
+              <div class="accordion-item">
+                <h3 class="accordion-header">
+                  <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faq-one" aria-expanded="true" aria-controls="faq-one">Is this an official Clash Royale website?</button>
+                </h3>
+                <div id="faq-one" class="accordion-collapse collapse show" data-bs-parent="#faq">
+                  <div class="accordion-body">
+                    No. Arena ID is an unofficial student fan project and is not endorsed by Supercell. Clash Royale characters and artwork belong to Supercell. See
+                    <a href="https://supercell.com/en/fan-content-policy/" target="_blank" rel="noopener noreferrer">Supercell's Fan Content Policy</a>
+                    .
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h3 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-two" aria-expanded="false" aria-controls="faq-two">Where are my answers stored?</button>
+                </h3>
+                <div id="faq-two" class="accordion-collapse collapse" data-bs-parent="#faq">
+                  <div class="accordion-body">Your nickname, current quiz, and most recent result are stored in this browser using localStorage. They are not sent to a server. Clearing site data removes them. If browser storage is unavailable, you can still finish the quiz in the current tab.</div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h3 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-three" aria-expanded="false" aria-controls="faq-three">Can I get a different result?</button>
+                </h3>
+                <div id="faq-three" class="accordion-collapse collapse" data-bs-parent="#faq">
+                  <div class="accordion-body">Yes. Different answers can lead to a different character. The same answers always produce the same result. You can go back and change answers before finishing, or start another round.</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="project-note">
+          <h2>Project credits</h2>
+          <p>Built with HTML5, CSS3, Bootstrap 5, JavaScript, and jQuery. Character and question data load from local JSON files.</p>
+          <p class="mb-0">
+            Artwork: Supercell, via the
+            <a href="https://github.com/RoyaleAPI/cr-api-assets" target="_blank" rel="noopener noreferrer">RoyaleAPI asset repository</a>
+            . Personality descriptions and scoring are original to this educational project.
+          </p>
+        </div>
+      </section>
+    </main>
+    <footer class="site-footer">
+      <div class="container">
+        <div class="footer-top">
+          <a class="footer-brand" href="index.html">
+            ♜ ARENA
+            <span>ID</span>
+          </a>
+          <a href="about.html">About this project ↗</a>
+        </div>
+        <div class="footer-bottom">
+          <span>© 2026 Arena ID · Student fan project</span>
+          <span>Unofficial. Not affiliated with or endorsed by Supercell.</span>
+        </div>
+      </div>
+    </footer>
+    <div id="notification" class="notification" role="status" aria-live="polite" hidden>
+    </div>
+    <noscript>
+      <div class="noscript">Enable JavaScript to take the quiz and browse character profiles.</div>
+    </noscript>
+  </body>
+</html>

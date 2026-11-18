@@ -1,0 +1,8 @@
+{
+  "name": "arena-id",
+  "version": "1.0.0",
+  "private": true,
+  "description": "A student Clash Royale personality quiz using HTML, CSS, Bootstrap, JavaScript and jQuery",
+  "scripts": { "start": "node server.js", "test": "node --test tests/scoring.test.js" },
+  "engines": { "node": ">=18" }
+}

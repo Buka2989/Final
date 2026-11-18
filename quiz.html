@@ -1,0 +1,188 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Discover your Clash Royale personality in 12 questions. Explore 8 characters and find your arena alter ego.">
+    <meta name="theme-color" content="#172724">
+    <title>The quiz | Arena ID</title>
+    <link rel="icon" href="assets/images/favicon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="assets/vendor/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <script defer src="assets/vendor/jquery.min.js"></script>
+    <script defer src="assets/vendor/bootstrap.bundle.min.js"></script>
+    <script defer src="assets/js/scoring.js"></script>
+    <script defer src="assets/js/app.js"></script>
+  </head>
+  <body data-page="quiz">
+    <a href="#main" class="skip-link">Skip to content</a>
+    <header class="site-header">
+      <nav class="navbar navbar-expand-md container" aria-label="Main navigation">
+        <a class="navbar-brand" href="index.html">
+          <span class="brand-symbol" aria-hidden="true">♜</span>
+          ARENA
+          <span class="brand-id">ID</span>
+          <span class="brand-divider">
+          </span>
+          <span class="brand-caption">FIND YOUR CARD</span>
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navigation" aria-controls="navigation" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon">
+          </span>
+        </button>
+        <div class="collapse navbar-collapse" id="navigation">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link"  href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="quiz.html">The quiz</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link"  href="characters.html">Characters</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link"  href="about.html">About</a>
+            </li>
+          </ul>
+          <a href="quiz.html" class="btn btn-nav ms-md-4">
+            Enter the arena
+            <span aria-hidden="true">↗</span>
+          </a>
+        </div>
+      </nav>
+    </header>
+    <main id="main">
+      <section class="container quiz-container section-space">
+        <div class="page-intro text-center">
+          <h1>Personality quiz</h1>
+          <p>Pick the answer closest to what you would do.</p>
+        </div>
+        <div id="quiz-loading" class="panel text-center" role="status">Loading questions…</div>
+        <section id="quiz-intro" class="panel intro-panel" hidden aria-labelledby="intro-title">
+          <span class="mini-crown" aria-hidden="true">♛</span>
+          <h2 id="intro-title">Choose a nickname</h2>
+          <p>Your nickname stays in this browser. No account needed.</p>
+          <form id="nickname-form" novalidate>
+            <label for="nickname" class="form-label">Player nickname</label>
+            <input id="nickname" class="form-control form-control-lg" autocomplete="nickname" maxlength="20" required minlength="2" aria-describedby="nickname-help nickname-error" placeholder="e.g. RoyalRookie">
+            <div id="nickname-help" class="form-text">2–20 characters. Letters, numbers, spaces, _ or -.</div>
+            <p id="nickname-error" class="field-error" role="alert">
+            </p>
+            <button class="btn btn-primary w-100" type="submit">
+              Enter the arena
+              <span aria-hidden="true">→</span>
+            </button>
+          </form>
+          <div id="resume-box" class="resume-box" hidden>
+            <p id="resume-description">
+            </p>
+            <button id="resume-quiz" class="btn btn-outline-dark" type="button">Continue saved quiz</button>
+          </div>
+          <p class="small-note">12 questions · About 3 minutes · Progress saved automatically</p>
+        </section>
+        <section id="quiz-question" class="panel" hidden aria-labelledby="question-title">
+          <div class="quiz-meta">
+            <span id="question-count">
+            </span>
+            <span id="question-category" class="category-label">
+            </span>
+          </div>
+          <div class="progress" role="progressbar" aria-label="Quiz completion" aria-valuemin="0" aria-valuemax="12" aria-valuenow="0">
+            <div id="quiz-progress" class="progress-bar">
+            </div>
+          </div>
+          <form id="answer-form" novalidate>
+            <fieldset>
+              <legend id="question-title" tabindex="-1">
+              </legend>
+              <div id="answer-options">
+              </div>
+            </fieldset>
+            <p id="answer-error" class="field-error" role="alert">
+            </p>
+            <div class="quiz-actions">
+              <button id="previous-question" class="btn btn-outline-dark" type="button">← Back</button>
+              <button id="next-question" class="btn btn-primary" type="submit">Next question →</button>
+            </div>
+          </form>
+          <div class="quiz-bottom">
+            <button class="link-button" id="restart-quiz" type="button" data-bs-toggle="modal" data-bs-target="#restart-modal">Start over</button>
+          </div>
+        </section>
+        <section id="quiz-result" class="panel result-panel" hidden aria-labelledby="result-title">
+          <div class="result-header">
+            <img id="result-image" alt="">
+            <p id="result-player" class="eyebrow"></p>
+            <h2 id="result-title" tabindex="-1"></h2>
+            <p id="result-role"></p>
+          </div>
+          <div class="result-body">
+            <p id="result-description" class="result-description"></p>
+            <div class="result-detail-grid">
+              <div>
+                <h3>Your strength</h3>
+                <p id="result-strength"></p>
+              </div>
+              <div>
+                <h3>Something to try</h3>
+                <p id="result-growth"></p>
+              </div>
+            </div>
+            <div class="trait-bars">
+              <h3>Your scores</h3>
+              <div id="result-scores"></div>
+            </div>
+            <p class="result-alternatives">Also close: <strong id="result-alternatives"></strong>.</p>
+            <div class="result-actions">
+              <button type="button" id="copy-result" class="btn btn-primary">Copy result</button>
+              <button type="button" id="retake-quiz" class="btn btn-outline-dark">Play again</button>
+              <a href="characters.html" class="btn btn-outline-dark">All characters</a>
+            </div>
+            <div id="share-fallback" class="share-fallback" hidden>
+              <label for="share-text">Select and copy your result:</label>
+              <textarea id="share-text" class="form-control" rows="3" readonly></textarea>
+            </div>
+          </div>
+        </section>
+        <p class="quiz-disclaimer">This quiz is just for fun.</p>
+      </section>
+      <div class="modal fade" id="restart-modal" tabindex="-1" aria-labelledby="restart-title" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h2 class="modal-title fs-4" id="restart-title">Start a new round?</h2>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
+              </button>
+            </div>
+            <div class="modal-body">Your current answers will be cleared. Your last completed result will stay saved until you finish a new quiz.</div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-outline-dark" data-bs-dismiss="modal">Keep playing</button>
+              <button id="confirm-restart" type="button" class="btn btn-primary" data-bs-dismiss="modal">Start over</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer class="site-footer">
+      <div class="container">
+        <div class="footer-top">
+          <a class="footer-brand" href="index.html">
+            ♜ ARENA
+            <span>ID</span>
+          </a>
+          <a href="about.html">About this project ↗</a>
+        </div>
+        <div class="footer-bottom">
+          <span>© 2026 Arena ID · Student fan project</span>
+          <span>Unofficial. Not affiliated with or endorsed by Supercell.</span>
+        </div>
+      </div>
+    </footer>
+    <div id="notification" class="notification" role="status" aria-live="polite" hidden>
+    </div>
+    <noscript>
+      <div class="noscript">Enable JavaScript to take the quiz and browse character profiles.</div>
+    </noscript>
+  </body>
+</html>

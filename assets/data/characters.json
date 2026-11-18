@@ -1,0 +1,130 @@
+[
+  {
+    "id": "knight",
+    "name": "Knight",
+    "role": "The loyal protector",
+    "type": "Team player",
+    "elixir": 3,
+    "profile": [
+      65,
+      45,
+      95,
+      30
+    ],
+    "description": "You are the friend everyone can count on. You keep your promises, stand up for your people, and make a team feel safe.",
+    "strength": "Consistency. You show up even when the excitement wears off.",
+    "growth": "Your needs matter too. You can say no without letting your team down."
+  },
+  {
+    "id": "archers",
+    "name": "Archers",
+    "role": "The thoughtful teammate",
+    "type": "Team player",
+    "elixir": 3,
+    "profile": [
+      30,
+      85,
+      90,
+      45
+    ],
+    "description": "You notice what others miss. Patient, observant, and collaborative, you prefer a well-timed move to a dramatic entrance.",
+    "strength": "Perspective. You listen closely and connect the dots.",
+    "growth": "Share your ideas sooner. They do not have to be perfect to be useful."
+  },
+  {
+    "id": "wizard",
+    "name": "Wizard",
+    "role": "The creative spark",
+    "type": "Thinker",
+    "elixir": 5,
+    "profile": [
+      60,
+      75,
+      40,
+      95
+    ],
+    "description": "You bring imagination to every challenge. You love exploring possibilities and turning a small idea into something people remember.",
+    "strength": "Originality. You can find a fresh route through a familiar problem.",
+    "growth": "Give your best idea enough time to become a finished project."
+  },
+  {
+    "id": "mini-pekka",
+    "name": "Mini P.E.K.K.A",
+    "role": "The focused achiever",
+    "type": "Leader",
+    "elixir": 4,
+    "profile": [
+      85,
+      85,
+      35,
+      25
+    ],
+    "description": "Once you pick a goal, you commit. You value clear plans, practical progress, and the satisfaction of getting things done.",
+    "strength": "Focus. You turn a difficult task into a series of manageable steps.",
+    "growth": "Leave room for other approaches. Efficiency is not the only thing a team needs."
+  },
+  {
+    "id": "hog-rider",
+    "name": "Hog Rider",
+    "role": "The fearless adventurer",
+    "type": "Explorer",
+    "elixir": 4,
+    "profile": [
+      100,
+      25,
+      60,
+      80
+    ],
+    "description": "You are usually the first to say: let's try it. Your energy gets people moving, and a little uncertainty makes life more interesting.",
+    "strength": "Initiative. You give the group the push it needs to begin.",
+    "growth": "Pause for a quick plan before you charge into your next adventure."
+  },
+  {
+    "id": "valkyrie",
+    "name": "Valkyrie",
+    "role": "The confident leader",
+    "type": "Leader",
+    "elixir": 4,
+    "profile": [
+      90,
+      60,
+      85,
+      45
+    ],
+    "description": "When things get messy, you step forward. You are direct, protective, and willing to make a hard decision for the people around you.",
+    "strength": "Courage. You face uncomfortable situations instead of avoiding them.",
+    "growth": "Make space for quieter voices before making the final call."
+  },
+  {
+    "id": "goblins",
+    "name": "Goblins",
+    "role": "The playful wildcard",
+    "type": "Explorer",
+    "elixir": 2,
+    "profile": [
+      65,
+      55,
+      25,
+      100
+    ],
+    "description": "You question the obvious answer and enjoy a clever shortcut. Curious and spontaneous, you make ordinary days a little less predictable.",
+    "strength": "Resourcefulness. You spot possibilities where others only see rules.",
+    "growth": "Think about how a surprise will land before you spring it on someone."
+  },
+  {
+    "id": "ice-wizard",
+    "name": "Ice Wizard",
+    "role": "The calm strategist",
+    "type": "Thinker",
+    "elixir": 3,
+    "profile": [
+      20,
+      100,
+      65,
+      55
+    ],
+    "description": "You stay composed under pressure. You like understanding the whole situation before acting and help others slow down when things get tense.",
+    "strength": "Clarity. You separate a real problem from the noise around it.",
+    "growth": "Sometimes a good decision now is more useful than a perfect decision later."
+  }
+]
